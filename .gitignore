@@ -1,0 +1,6 @@
+#IDE related
+*.project
+*.classpath
+.settings/
+
+*/target
