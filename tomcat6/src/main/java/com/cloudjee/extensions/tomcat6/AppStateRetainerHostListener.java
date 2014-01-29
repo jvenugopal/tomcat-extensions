@@ -30,7 +30,7 @@ import org.apache.juli.logging.LogFactory;
 
 /**
  * Custom Listener to restore the webapp state of each host after the Tomcat is 
- * shutdown/terminated.
+ * restarted.
  * @author <a href="mailto:pankaj.n@imaginea.com">pankaj</a>
  *
  */
