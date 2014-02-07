@@ -21,4 +21,8 @@
         <version>6.0.16</version>
       </dependency>
   </dependencies>
+  
+  <build>
+		<finalName>cloudjee-extensions-tomcat6</finalName>
+  </build>
 </project>

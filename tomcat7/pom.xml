@@ -21,4 +21,8 @@
 			<version>7.0.12</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<finalName>cloudjee-extensions-tomcat7</finalName>
+	</build>
 </project>

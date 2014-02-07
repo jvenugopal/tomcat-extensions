@@ -91,13 +91,19 @@ public class AppStateRetainerHostListener implements LifecycleListener {
 				log.error("Exception occurred in starting the apps." + t.getMessage(), t);
 			}
 		}
+
+		setStartChildrenFlag(host, true);
 	}
 
 	private void handleBeforeStartEvent(StandardHost host) {
 		Set<String> appNames = deserializeAndRestoreState(host);
 		if(appNames != null) {
-			host.setStartChildren(false);
+			setStartChildrenFlag(host, false);
 		}
+	}
+
+	private void setStartChildrenFlag(StandardHost host, boolean startChildren) {
+		host.setStartChildren(startChildren);
 	}
 
 	/**
