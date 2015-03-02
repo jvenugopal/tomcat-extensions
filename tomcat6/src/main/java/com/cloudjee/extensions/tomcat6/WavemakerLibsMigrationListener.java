@@ -22,8 +22,9 @@ public class WavemakerLibsMigrationListener implements LifecycleListener {
 
     private static Log log = LogFactory.getLog(WavemakerLibsMigrationListener.class);
 
-    private static final String LIB_PATH = "/vol/wm-lib";
+    private static final String LIB_PATH = "/vol/wm-studio-lib";
     private static final List<String> defaultApps = Arrays.asList("/docs", "/examples", "/host-manager", "/manager", "/ROOT");
+    private static final String VERSION_FILE = "wm-libs-version.props";
 
     @Override
     public void lifecycleEvent(LifecycleEvent event) {
@@ -50,7 +51,7 @@ public class WavemakerLibsMigrationListener implements LifecycleListener {
         boolean toMigrate = true;
         Path appWebInfVersionPropsPath = null;
         try {
-            appWebInfVersionPropsPath = Paths.get(tomcatBase, "webapps", appName, "WEB-INF", "lib", "wm-libs-version.props");
+            appWebInfVersionPropsPath = Paths.get(tomcatBase, "webapps", appName, "WEB-INF", "lib", VERSION_FILE);
         } catch (Exception e) {
             log.info("Path  Does not exists for appName :- " + appName, e);
             toMigrate = false;
