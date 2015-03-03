@@ -18,9 +18,9 @@ import java.util.List;
 /**
  * Created by anshulr on 27/2/15.
  */
-public class WavemakerLibsMigrationListener implements LifecycleListener {
+public class WaveMakerLibsMigrationListener implements LifecycleListener {
 
-    private static Log log = LogFactory.getLog(WavemakerLibsMigrationListener.class);
+    private static Log log = LogFactory.getLog(WaveMakerLibsMigrationListener.class);
 
     private static final String LIB_PATH = "/vol/wm-studio-lib";
     private static final List<String> defaultApps = Arrays.asList("/docs", "/examples", "/host-manager", "/manager", "/ROOT");
